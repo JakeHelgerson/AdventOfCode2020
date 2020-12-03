@@ -25,7 +25,7 @@ class Day2 {
       val char2Match = Try { line.password.charAt(line.upper - 1).equals(line.letter) }
 
     (char1Match, char2Match) match {
-      case (Success(c1), Success(c2)) => (c1 && !c2) || (!c1 && c2)
+      case (Success(c1), Success(c2)) => c1 ^ c2
       case (Success(c1), Failure(_)) => c1
       case (Failure(_), Success(c2)) => c2
       case (Failure(_), Failure(_)) => false
