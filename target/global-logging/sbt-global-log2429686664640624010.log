@@ -1,0 +1,14 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/jakehelgerson/code/blargh/AdventOfCode2020/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/jakehelgerson/code/blargh/AdventOfCode2020/src/main/scala/Day1.scala:23:29: not found: value recursiveSolution[0m
+[0m[[0m[31merror[0m] [0m[0m      case x if x < 2020 => recursiveSolution(store.tail.head, high, store.tail)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/jakehelgerson/code/blargh/AdventOfCode2020/src/main/scala/Day1.scala:24:29: not found: value recursiveSolution[0m
+[0m[[0m[31merror[0m] [0m[0m      case x if x > 2020 => recursiveSolution(low, store.init.last, store.init)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed Dec 1, 2020, 3:53:59 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

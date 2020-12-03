@@ -18,13 +18,13 @@ class Day2 {
     }
   )
 
-  println(part1)
+  println(s"Part 1: $part1")
 
   val part2: Int = data.count( line =>
     line.password(line.lower - 1) == line.letter ^ line.password(line.upper - 1) == line.letter
   )
 
-  println(part2)
+  println(s"Part 2: $part2")
 }
 
 object Day2 {
