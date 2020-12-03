@@ -21,16 +21,13 @@ class Day2 {
   println(part1)
 
   val part2: Int = data.count( line => {
-      val char1Match = Try { line.password.charAt(line.lower - 1).equals(line.letter) }
-      val char2Match = Try { line.password.charAt(line.upper - 1).equals(line.letter) }
+      val char1Match =  line.password.charAt(line.lower - 1).equals(line.letter)
+      val char2Match =  line.password.charAt(line.upper - 1).equals(line.letter)
 
-    (char1Match, char2Match) match {
-      case (Success(c1), Success(c2)) => c1 ^ c2
-      case (Success(c1), Failure(_)) => c1
-      case (Failure(_), Success(c2)) => c2
-      case (Failure(_), Failure(_)) => false
+    char1Match ^ char2Match
+
     }
-  })
+  )
 
   println(part2)
 }
