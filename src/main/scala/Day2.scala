@@ -13,20 +13,15 @@ class Day2 {
     })
 
   val part1: Int = data.count(line => {
-    val num = line.password.map(char  => if (char.equals(line.letter)) 1 else 0 ).sum
+    val num = line.password.map(char  => if (char == line.letter) 1 else 0 ).sum
     num >= line.lower && num <= line.upper
     }
   )
 
   println(part1)
 
-  val part2: Int = data.count( line => {
-      val char1Match =  line.password.charAt(line.lower - 1).equals(line.letter)
-      val char2Match =  line.password.charAt(line.upper - 1).equals(line.letter)
-
-    char1Match ^ char2Match
-
-    }
+  val part2: Int = data.count( line =>
+    line.password(line.lower - 1) == line.letter ^ line.password(line.upper - 1) == line.letter
   )
 
   println(part2)
